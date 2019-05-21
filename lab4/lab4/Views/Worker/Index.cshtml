@@ -1,0 +1,35 @@
+@model IEnumerable<lab4.dto.WorkerDto>
+@{
+    ViewData["Title"] = "Workers list";
+    Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Workers and their projects</title>
+</head>
+<body>
+<h3>Workers</h3>
+<table>
+    <tr>
+        <td>Имя</td>
+        <td>Фамилия</td>
+        <td>Отчество</td>
+        <td>Суммарная премия</td>
+        <td></td>
+    </tr>
+    @foreach (var workerDto in Model)
+    {
+        <tr>
+            <td>@workerDto.Worker.FirstName</td>
+            <td>@workerDto.Worker.LastName</td>
+            <td>@workerDto.Worker.Patronimic</td>
+            <td>@workerDto.PremiumSum</td>
+            <td><a href="~/Worker/Info/@workerDto.Worker.Id">Показать</a></td>
+        </tr>
+ }
+    }
+</table>
+</body>
+</html>

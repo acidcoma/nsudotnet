@@ -1,0 +1,28 @@
+@model lab4.model.Worker
+@{
+    ViewData["Title"] = "Edit orker";
+    Layout = null;
+}
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <title>Worker edit page</title>
+</head>
+<body>
+<p>Имя:</p>
+<p><input name="name" pattern="\s"></p>
+<p>
+    Имя: @Model.FirstName
+</p>
+<p>
+    Фамилия: @Model.LastName
+</p>
+<p>
+    Отчество: @Model.Patronimic
+</p>
+<h3>Проекты</h3>
+
+</body>
+</html>
+
