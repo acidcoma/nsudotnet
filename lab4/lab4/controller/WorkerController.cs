@@ -63,7 +63,7 @@ namespace lab4.controller
             var id = worker.Id;
             var firstName = worker.FirstName;
             var lastName = worker.LastName;
-            var patonimic = worker.Patronimic;
+           // var patonimic = worker.Patronimic;
 
             //update database here..
 

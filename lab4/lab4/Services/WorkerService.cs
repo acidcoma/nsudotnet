@@ -31,10 +31,8 @@ namespace lab4.service
         {
             using (var db = new Context())
             {
-                var w = db.Workers
-                    .Load(worker => worker.Projects);
+                return db.Workers.ToList();
                     
-                return w;
             }
         }
 
